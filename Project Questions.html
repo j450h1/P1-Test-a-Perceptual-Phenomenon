@@ -174,10 +174,11 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#Place dataset in current working directory</span>
+<span class="c">#from IPython.external import mathjax; mathjax.install_mathjax()</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 <span class="k">print</span> <span class="n">path</span>
@@ -196,12 +197,12 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/Users/jas
+<pre>/Users/jas/P1-Test-a-Perceptual-Phenomenon
 </pre>
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -347,7 +348,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[</span><span class="s">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span>
@@ -362,7 +363,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -565,9 +566,9 @@ DEPENDENT   - Response Time in seconds</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ho - Null Hypothesis: (  μi - μc = 0 ) There is no significant difference in the averge response time in viewing the congruent(c) words vs viewing the incongruent(i) words.
-Ha - Alternative Hypothesis: ( μi - μc ≠ 0 ) There is a significant difference, positive or negative, in the average response times.</p>
-<p>The Dependent Samples t-Test is the appropriate statistical test as the same subjects are assigned two different conditions. In addition, we don't have any population parameters (so a z-test would not be appropriate here).</p>
+<p>Ho - <strong>Null Hypothesis</strong>: (  μi - μc = 0 ) There is <strong>no</strong> significant difference in the population average response time in viewing the congruent(c) words vs viewing the incongruent(i) words.</p>
+<p>Ha - <strong>Alternative Hypothesis</strong>: ( μi - μc ≠ 0 ) There is a significant difference, positive or negative, in the population average response times.</p>
+<p>The Dependent Samples t-Test is the appropriate statistical test as the same subjects are assigned two different conditions. The different conditions are dependent because, in theory, by doing the first test you have some practice doing it and you might have an unfair advantage due to this learning effect in doing the similar type of test second. In addition, we don't have any population parameters provided (so a z-test would not be appropriate here).</p>
 
 </div>
 </div>
@@ -583,7 +584,7 @@ Ha - Alternative Hypothesis: ( μi - μc ≠ 0 ) There is a significant differen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">c</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;Congruent&#39;</span><span class="p">];</span> <span class="n">i</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;Incongruent&#39;</span><span class="p">]</span>
@@ -596,39 +597,10 @@ Ha - Alternative Hypothesis: ( μi - μc ≠ 0 ) There is a significant differen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">c_mean</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">mean</span><span class="p">();</span> <span class="nb">round</span><span class="p">(</span><span class="n">c_mean</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>14.05</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">i_mean</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">mean</span><span class="p">();</span> <span class="nb">round</span><span class="p">(</span><span class="n">i_mean</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">c_mean</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">mean</span><span class="p">();</span> <span class="nb">round</span><span class="p">(</span><span class="n">c_mean</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -643,6 +615,35 @@ Ha - Alternative Hypothesis: ( μi - μc ≠ 0 ) There is a significant differen
 
 
 <div class="output_text output_subarea output_execute_result">
+<pre>14.05</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">i_mean</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">mean</span><span class="p">();</span> <span class="nb">round</span><span class="p">(</span><span class="n">i_mean</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
 <pre>22.02</pre>
 </div>
 
@@ -654,7 +655,7 @@ Ha - Alternative Hypothesis: ( μi - μc ≠ 0 ) There is a significant differen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">c_sd</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">std</span><span class="p">();</span> <span class="nb">round</span><span class="p">(</span><span class="n">c_sd</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -668,7 +669,7 @@ Ha - Alternative Hypothesis: ( μi - μc ≠ 0 ) There is a significant differen
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -683,7 +684,7 @@ Ha - Alternative Hypothesis: ( μi - μc ≠ 0 ) There is a significant differen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">i_sd</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">std</span><span class="p">();</span> <span class="nb">round</span><span class="p">(</span><span class="n">i_sd</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -697,7 +698,7 @@ Ha - Alternative Hypothesis: ( μi - μc ≠ 0 ) There is a significant differen
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -721,7 +722,7 @@ Ha - Alternative Hypothesis: ( μi - μc ≠ 0 ) There is a significant differen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -1014,7 +1015,7 @@ HuZKwMysh/1/qWr4zT155zQAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -1336,7 +1337,7 @@ tcrit =  +- 1.711</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#number of subjects in the sample</span>
@@ -1352,7 +1353,7 @@ tcrit =  +- 1.711</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -1367,7 +1368,7 @@ tcrit =  +- 1.711</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#point estimate of μi - μc -&gt; PE (in seconds)</span>
@@ -1383,7 +1384,7 @@ tcrit =  +- 1.711</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -1398,7 +1399,7 @@ tcrit =  +- 1.711</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#s - sample standard deviation of differences</span>
@@ -1413,8 +1414,12 @@ tcrit =  +- 1.711</p>
 <span class="c">#3. SSD = sum of squared differences</span>
 <span class="n">SSD</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;SQD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
-<span class="c"># s = SSD/(n-1)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">SSD</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="c">#4. v = variance = SSD/(n-1)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">SSD</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c">#5. s = sqrt(v)</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 <span class="nb">round</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
@@ -1426,11 +1431,11 @@ tcrit =  +- 1.711</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>23.67</pre>
+<pre>4.86</pre>
 </div>
 
 </div>
@@ -1441,11 +1446,10 @@ tcrit =  +- 1.711</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#t-statistic</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="c">#t = PE/(s/√n)</span>
 <span class="c">#PE = (μi - μc)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">PE</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="o">/</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
@@ -1460,11 +1464,11 @@ tcrit =  +- 1.711</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1.6487</pre>
+<pre>8.0207</pre>
 </div>
 
 </div>
@@ -1478,10 +1482,10 @@ tcrit =  +- 1.711</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>t-statistic &lt; t-critical<br>
-1.6487 &lt; 1.711</p>
-<h3 id="Conclusion:">Conclusion:<a class="anchor-link" href="#Conclusion:">&#182;</a></h3><p>We <strong>FAIL</strong> to reject the Null Hypothesis which states that there is no significant differences between the average completion time for the two different conditions (Congruent &amp; Incongruent). In theory,
-if we took a random person from the population we wouldn't expect them to be significantly slower or significantly faster in either condition. These are not the results I expected, but I realize that the results were close to being significant at the 90% level (1.711-1.6487 = 0.0623) and if took another sample of 24 subjects we may confirm my anecdotal experience that there is a significant difference. This has taught me that in some cases there may be a practical significance or a perceived difference and it still might not be considered statistically significant.</p>
+<p>t-statistic &gt; t-critical<br>
+8.0207 &gt; 1.711</p>
+<h3 id="Conclusion:">Conclusion:<a class="anchor-link" href="#Conclusion:">&#182;</a></h3><p>We <strong>reject</strong> the Null Hypothesis which states that there is no significant differences between the population average completion time for the two different conditions (Congruent &amp; Incongruent). In theory,
+if we were able to calculate the average difference of every single person person who took this pair of tests (the population) we expect there would be a significantly slower or significantly faster time in either the the incongruent or congruent condition. These are the results I expected since my own anecdotal experience showed that the second condition took me longer to complete.</p>
 
 </div>
 </div>
